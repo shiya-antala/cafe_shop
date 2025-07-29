@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place Order</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Style -->
+    <style>
+        body {
+            background-color: #fff8e1;
+            font-family: Arial, sans-serif;
+            padding-top: 50px;
+        }
+
+        .container {
+            max-width: 500px;
+            background-color: #fff3e0;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #bf360c;
+            margin-bottom: 30px;
+        }
+
+        .btn-custom {
+            background-color: #ff7043;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-custom:hover {
+            background-color: #d84315;
+        }
+
+        label {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Place Your Order</h2>
+<form action="/cgi-bin/order_handler.c" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Customer Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="item" class="form-label">Item Number (from Menu):</label>
+            <input type="number" class="form-control" id="item" name="item" required min="1" max="10">
+        </div>
+
+        <div class="mb-3">
+            <label for="qty" class="form-label">Quantity:</label>
+            <input type="number" class="form-control" id="qty" name="qty" required min="1">
+        </div>
+
+        <button type="submit" class="btn btn-custom w-100">Order Now</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS (optional, if needed) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

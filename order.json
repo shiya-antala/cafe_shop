@@ -1,0 +1,20 @@
+[
+    {
+        "order_id": 1,
+        "customer_name": "John",
+        "item_id": 2,
+        "quantity": 3
+    },
+    {
+        "order_id": 2,
+        "customer_name": "Aisha",
+        "item_id": 1,
+        "quantity": 1
+    },
+    {
+        "order_id": 3,
+        "customer_name": "Ravi",
+        "item_id": 3,
+        "quantity": 2
+    }
+]
